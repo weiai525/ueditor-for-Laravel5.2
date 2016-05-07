@@ -1,5 +1,5 @@
 <?php
-namespace App\Libs;
+
 /**
  * Created by JetBrains PhpStorm.
  * User: taoqili
@@ -7,7 +7,7 @@ namespace App\Libs;
  * Time: 上午11: 32
  * UEditor编辑器通用上传类
  */
-class UeditorUploader
+class Uploader
 {
     private $fileField; //文件域名
     private $file; //文件上传对象
@@ -62,7 +62,8 @@ class UeditorUploader
         } else {
             $this->upFile();
         }
-        //$this->stateMap['ERROR_TYPE_NOT_ALLOWED'] = iconv('unicode', 'utf-8', $this->stateMap['ERROR_TYPE_NOT_ALLOWED']);
+
+        $this->stateMap['ERROR_TYPE_NOT_ALLOWED'] = iconv('unicode', 'utf-8', $this->stateMap['ERROR_TYPE_NOT_ALLOWED']);
     }
 
     /**
@@ -368,8 +369,4 @@ class UeditorUploader
         );
     }
 
-<<<<<<< 0c200f8e33942a67ffd81056bda46460ca6fe744
 }
-=======
-}
->>>>>>> test
